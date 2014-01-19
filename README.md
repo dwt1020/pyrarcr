@@ -1,6 +1,6 @@
 # pyrarcr
 
-A rar password cracker written in python 3.
+A rar password cracker written in Python 3.
 
 ## Usage
 
