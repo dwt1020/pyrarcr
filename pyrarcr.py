@@ -38,7 +38,7 @@ def rc(rf):
  else:
   print("ERROR: File isnt a rar file.\nExiting...")
 
-#running the function/checking if the file exists
+#checking if the file exists/running the function
 if len(sys.argv)==2:
  if os.path.exists(sys.argv[1])==True:
   rc(sys.argv[1])
