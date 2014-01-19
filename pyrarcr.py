@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #finds the password of a desired rar file using a brute-force algorithm
-###will fail to find the password if the password has a character that isnt in
- the english alphabet or isnt a number###
+##will fail to find the password if the password has a character that isnt in
+##the english alphabet or isnt a number
 
 #importing needed modules
 import time,os,sys,shutil
