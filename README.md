@@ -1,1 +1,17 @@
-This python script tries to find rar passwords using a brute force algorithm.
+# pyrarcr
+
+A rar password cracker written in python 3.
+
+## Usage
+
+python3 pyrarcr.py [rar file]
+
+## Contribution and License Agreement
+
+If you contribute code to this project, you are implicitly allowing your code
+to be distributed under the mit license. You are also implicitly verifying that
+all code is your original work.
+
+## License
+
+See LICENSE.
