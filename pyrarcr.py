@@ -22,7 +22,7 @@ def rc(rf):
   a=[x for x in alphabet]
   for j in range(i):
    a=[x+i for x in alphabet for i in a]
-  for k in a: 
+  for k in a:
    if rf[-4:]==".rar":
     print("Trying:",k)
     kf=os.popen("unrar t -y -p%s %s 2>&1|grep 'All OK'"%(k,rf))
@@ -48,7 +48,7 @@ def rc(rf):
       time.sleep(2)
       sys.exit(1)
    else:
-    print("ERROR: File isnt a rar file.\nExiting...")
+    print("ERROR: File isnt a RAR, ZIP or 7z file.\nExiting...")
 
 #checking if the file exists/running the function
 if len(sys.argv)==2:
