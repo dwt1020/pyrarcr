@@ -57,7 +57,7 @@ def rc(rf):
 
 #checking if the file exists/running the function
 if len(sys.argv)==2:
- if os.path.exists(sys.argv[1])==True:
+ if os.path.exists(sys.argv[1]):
   rc(sys.argv[1])
  else:
   print("ERROR: File doesn't exist.\nExiting...")
