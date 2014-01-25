@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
 
-#####      ##### ##### #####             ####   ####
-#   # #  # #   # #   # #   # #### ####   #  #      #
-##### #### ##### ##### ##### #    #      #  #   ####
-#       #  #  #  #   # #  #  #    #      #  #   #
-#       #  #   # #   # #   # #### #      #### # ####
-
 #finds the password of a desired rar or zip file using a brute-force algorithm
 ##will fail to find the password if the password has a character that isnt in
 ##the english alphabet or isnt a number (you can change the char. list though)
-#now using itertools!
 
 #importing needed modules
-import time,os,sys,shutil,itertools
+import time,os,sys,shutil
 
 #checking if the user has unrar/p7zip installed
 for which in ["unrar","p7zip"]:
@@ -25,9 +18,11 @@ def rc(rf):
  alphabet="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ1234567890"
  start=time.time()
  tryn=0
- for a in range(1,len(alphabet)+1):
-  for b in itertools.product(alphabet,repeat=a):
-   k="".join(b)
+ for i in range(sys.maxsize):
+  a=[x for x in alphabet]
+  for j in range(i):
+   a=[x+i for x in alphabet for i in a]
+  for k in a:
    if rf[-4:]==".rar":
     print("Trying:",k)
     kf=os.popen("unrar t -y -p%s %s 2>&1|grep 'All OK'"%(k,rf))
