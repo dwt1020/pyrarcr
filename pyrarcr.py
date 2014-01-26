@@ -9,7 +9,6 @@
 #finds the password of a desired rar or zip file using a brute-force algorithm
 ##will fail to find the password if the password has a character that isnt in
 ##the english alphabet or isnt a number (you can change the char. list though)
-#now using itertools!
 
 #importing needed modules
 import time,os,sys,shutil,itertools
