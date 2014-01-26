@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-#####      ##### ##### #####             ####   ####
-#   # #  # #   # #   # #   # #### ####   #  #      #
-##### #### ##### ##### ##### #    #      #  #   ####
-#       #  #  #  #   # #  #  #    #      #  #   #
-#       #  #   # #   # #   # #### #      #### # ####
+#####      ##### ##### #####             ####   ####   #
+#   # #  # #   # #   # #   # #### ####   #  #      #  ##
+##### #### ##### ##### ##### #    #      #  #   ####   #
+#       #  #  #  #   # #  #  #    #      #  #   #      #
+#       #  #   # #   # #   # #### #      #### # #### # #
 
 #finds the password of a desired rar or zip file using a brute-force algorithm
 ##will fail to find the password if the password has a character that isnt in
@@ -14,6 +14,12 @@
 #importing needed modules
 import time,os,sys,shutil,itertools
 
+name=os.path.basename(__file__)
+
+#checking if the user's operating system is compatible with pyrarcr
+if os.name!="posix":
+ print("ERROR:",name,"isn't compatible with your system.")
+ sys.exit(-1)
 #checking if the user has unrar/p7zip installed
 for which in ["unrar","p7zip"]:
  if not shutil.which(which):
@@ -62,5 +68,5 @@ if len(sys.argv)==2:
  else:
   print("ERROR: File doesn't exist.\nExiting...")
 else:
- print("Usage:",os.path.basename(__file__),"[rar file]")
- print("Example:",os.path.basename(__file__),"foobar.rar")
+ print("Usage:",name,"[rar file]")
+ print("Example:",name,"foobar.rar")
